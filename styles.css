@@ -121,7 +121,7 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
 }
 .brand { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; letter-spacing: -0.01em; display: flex; align-items: center; gap: 0.65rem; white-space: nowrap; flex-shrink: 0; }
 .brand .cn { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-3); font-weight: 400; letter-spacing: 0.04em; }
-.brand-mark { flex-shrink: 0; transition: opacity 0.2s var(--ease); }
+.brand-mark { flex-shrink: 0; transform: translateY(-2px); transition: opacity 0.2s var(--ease); }
 .brand:hover .brand-mark { opacity: 0.75; }
 .nav-links { display: flex; align-items: center; gap: 0.4rem; list-style: none; }
 .nav-links > li > a {
