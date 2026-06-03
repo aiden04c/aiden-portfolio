@@ -333,7 +333,7 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
 .edu-deg { font-size: var(--t-body); font-weight: 600; color: var(--ink); line-height: 1.3; }
 .edu-field { font-size: var(--t-meta); color: var(--accent-d); font-weight: 500; }
 .edu-where { font-family: var(--mono); font-size: var(--t-eyebrow); color: var(--ink-3); letter-spacing: 0.04em; }
-.edu-grade { font-family: var(--mono); font-size: var(--t-body); color: var(--ink-2); font-weight: 500; letter-spacing: 0.04em; }
+.edu-grade { font-family: var(--mono); font-size: var(--t-eyebrow); color: var(--ink-2); font-weight: 500; letter-spacing: 0.04em; }
 .edu-body p { color: var(--ink-2); font-size: var(--t-meta); line-height: 1.62; }
 .edu-body p strong { color: var(--ink); font-weight: 600; }
 
