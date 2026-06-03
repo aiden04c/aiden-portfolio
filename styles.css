@@ -433,6 +433,11 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
   /* Proof strip — drop the floating separator dots when names wrap */
   .proof-names { gap: 0.4rem 1.1rem; }
   .proof-names span + span::before { display: none; }
+
+  /* Reduce section top/bottom padding on mobile (inline styles are desktop-tuned) */
+  .section.about   { padding-top: 55px !important; padding-bottom: 40px !important; }
+  section#services { padding-top: 50px !important; padding-bottom: 40px !important; }
+  section#work     { padding-top: 50px !important; padding-bottom: 28px !important; }
 }
 /* Very small phones — final type + spacing tuning */
 @media (max-width: 400px) {
