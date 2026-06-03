@@ -162,15 +162,15 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
 .hero-photo { position: relative; align-self: end; justify-self: center; }
 /* LAYER 1 — soft brand-green glow UNDER the figure (separate layer) */
 .hero-photo .hero-stage {
-  position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%);
-  width: 280%; height: 240%; z-index: 0; border-radius: 50%; pointer-events: none;
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 380%; height: 340%; z-index: 0; border-radius: 50%; pointer-events: none;
   background:
-    radial-gradient(56% 54% at 50% 46%,
-      color-mix(in srgb, var(--accent) 58%, transparent) 0%,
-      color-mix(in srgb, var(--accent) 42%, transparent) 26%,
-      color-mix(in srgb, var(--accent) 24%, transparent) 46%,
-      color-mix(in srgb, var(--accent) 10%, transparent) 66%,
-      transparent 82%);
+    radial-gradient(55% 55% at 50% 50%,
+      color-mix(in srgb, var(--accent) 28%, transparent) 0%,
+      color-mix(in srgb, var(--accent) 18%, transparent) 30%,
+      color-mix(in srgb, var(--accent) 10%, transparent) 55%,
+      color-mix(in srgb, var(--accent) 4%, transparent) 75%,
+      transparent 92%);
   filter: blur(64px);
 }
 .hero-photo .plinth { display: none; }
