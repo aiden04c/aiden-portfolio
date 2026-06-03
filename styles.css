@@ -385,7 +385,7 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
   .about-mob-eyebrow { display: inline-flex; margin-bottom: 1.5rem; }
   .about-body > .eyebrow { display: none; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-aside { position: static; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem 2rem; }
+  .about-aside { position: static; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 1.5rem 2rem; border-bottom: 1px solid var(--line); padding-bottom: 1.75rem; margin-bottom: 0.25rem; }
   .about-photo { max-width: 280px; flex: 0 0 240px; }
   .about-aside .about-facts { flex: 1; min-width: 240px; align-content: start; }
 }
