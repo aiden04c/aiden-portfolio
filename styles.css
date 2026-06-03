@@ -333,7 +333,6 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
 .edu-deg { font-size: var(--t-body); font-weight: 600; color: var(--ink); line-height: 1.3; }
 .edu-field { font-size: var(--t-meta); color: var(--accent-d); font-weight: 500; }
 .edu-where { font-family: var(--mono); font-size: var(--t-eyebrow); color: var(--ink-3); letter-spacing: 0.04em; }
-.edu-grade { font-family: var(--mono); font-size: var(--t-eyebrow); color: var(--ink-2); font-weight: 500; letter-spacing: 0.04em; }
 .edu-body p { color: var(--ink-2); font-size: var(--t-meta); line-height: 1.62; }
 .edu-body p strong { color: var(--ink); font-weight: 600; }
 
@@ -394,6 +393,8 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
   .brand { font-size: 1.1rem; }
   .nav-cta .btn { width: 100%; justify-content: center; }
   .nav-toggle { display: flex; }
+  /* Align every section to the SAME left gutter on mobile (some have inline 44px padding) */
+  .nav-inner, .stats-inner, .stats-foot { padding-left: var(--gut) !important; padding-right: var(--gut) !important; }
 
   /* HERO — stack vertically on phones so the text gets full width and stays readable */
   .hero { padding-top: clamp(4.5rem, 16vw, 6rem); }
@@ -405,21 +406,32 @@ svg.ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: r
   .hero h1 { font-size: clamp(2rem, 9vw, 2.7rem); margin: 1rem 0 1.1rem; line-height: 1.08; }
   .hero-lede { font-size: var(--t-body); line-height: 1.6; max-width: 100%; }
   .hero-status { font-size: var(--t-eyebrow); }
-  .hero-cta { flex-direction: row; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.6rem; }
-  .hero-cta .btn { padding: 0.8rem 1.4rem; font-size: var(--t-meta); }
+  /* CTA — full-width, evenly split tap targets */
+  .hero-cta { flex-direction: row; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+  .hero-cta .btn { flex: 1 1 140px; justify-content: center; padding: 0.9rem 1.2rem; font-size: var(--t-meta); }
 
-  /* Stats */
-  .stats-inner { grid-template-columns: 1fr 1fr; gap: 1.6rem 1.2rem; }
-  .about-facts { grid-template-columns: 1fr; }
+  /* Stats — single clean stacked list (number + label per row) */
+  .stats-inner { grid-template-columns: 1fr; gap: 0; }
+  .stat { padding: 1.1rem 0 0; border-left: 0; border-top: 1px solid var(--accent-line); }
+  .stat:first-child { padding-top: 0; border-top: 0; }
+  .stat-val { font-size: 2.1rem; }
+  .stat-lbl { margin-top: 0.25rem; }
+
+  /* About — stack photo above facts, both full width */
+  .about-facts { grid-template-columns: 1fr 1fr; }
+  .about-aside { flex-direction: column; gap: 1.5rem; }
+  .about-photo { max-width: 320px; flex: 0 0 auto; width: 100%; }
+  .about-aside .about-facts { min-width: 0; width: 100%; }
+  .about-photo .photo-frame img { width: 100% !important; height: 100% !important; }
+
   /* Proof strip — drop the floating separator dots when names wrap */
   .proof-names { gap: 0.4rem 1.1rem; }
   .proof-names span + span::before { display: none; }
 }
-/* Very small phones — let the two-up stats stack so labels aren't cut off */
+/* Very small phones — final type + spacing tuning */
 @media (max-width: 400px) {
-  .stats-inner { grid-template-columns: 1fr; gap: 1.4rem; }
-  .stat:nth-child(odd) { padding-left: 0; border-left: 0; }
   .hero h1 { font-size: clamp(1.85rem, 10vw, 2.3rem); }
+  .about-facts, .about-aside .about-facts { grid-template-columns: 1fr; }
 }
 /* Landscape / short-viewport — keep everything below the fixed nav and above the fold */
 @media (max-height: 600px) and (orientation: landscape) {
