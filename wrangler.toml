@@ -1,9 +1,0 @@
-name = "aiden-portfolio"
-compatibility_date = "2024-09-23"
-account_id = "211e5b9ceb8f9219d8b8491c75940a65"
-main = "worker.js"
-
-[assets]
-directory = "."
-binding = "ASSETS"
-serve_directly = false

@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aiden-portfolio",
+  "compatibility_date": "2026-05-10",
+  "observability": {
+    "enabled": true
+  },
+  "main": "worker.js",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".",
+    "run_worker_first": true
+  }
+}
